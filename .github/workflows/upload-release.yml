@@ -1,0 +1,19 @@
+name: Upload Release Assets
+on:
+  workflow_dispatch:
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download from Google Drive
+        run: |
+          pip install gdown
+          gdown "1l08qCWOwkmonQUkDNKzBvYwqShvGb0RI" -O win-unpacked.7z
+          gdown "1LDU0MPtONpMUxuouuUEY6u50si5JTfUv" -O "微影 Setup 0.1.0.7z"
+
+      - name: Upload to Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload SubtlePlayer "win-unpacked.7z" "微影 Setup 0.1.0.7z" --repo xuxk-cn/Subtle-Player
