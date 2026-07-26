@@ -4,7 +4,7 @@
 > 核心价值：**藏得快、恢复快、不碍事**。
 
 ---
-🌐 Languages: 中文 | [English](readme-en.md) 
+🌐 Languages: 中文 | [English](README-EN.md) 
 
 ## 一、产品简介
 
